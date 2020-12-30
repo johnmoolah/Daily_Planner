@@ -9,7 +9,7 @@ $(document).ready(function() {
             var currentHour = moment().hours();
 
             $(".time-block").each( function(){
-                var blockHour = parseItn($(this).attr("id").split("-")[1]);
+                var blockHour = parseInt($(this).attr("id").split("-")[1]);
 
                 if(blockHour < currentHour) {
                     $(this).add.Class("past")
@@ -31,11 +31,11 @@ $(document).ready(function() {
         var interval = setInterval(hourUpdater, 15000);
 
         $("#hour-9 .userInput").val(localStorage.getItem("hour-9"));
-        $("#hour-10 .userInput").val(localStorage.getItem("hour-9"));
-        $("#hour-11 .userInput").val(localStorage.getItem("hour-9"));
-        $("#hour-12 .userInput").val(localStorage.getItem("hour-9"));
-        $("#hour-13 .userInput").val(localStorage.getItem("hour-9"));
-        $("#hour-14 .userInput").val(localStorage.getItem("hour-9"));
-        $("#hour-15 .userInput").val(localStorage.getItem("hour-9"));
+        $("#hour-10 .userInput").val(localStorage.getItem("hour-10"));
+        $("#hour-11 .userInput").val(localStorage.getItem("hour-12"));
+        $("#hour-12 .userInput").val(localStorage.getItem("hour-13"));
+        $("#hour-13 .userInput").val(localStorage.getItem("hour-14"));
+        $("#hour-14 .userInput").val(localStorage.getItem("hour-15"));
+        $("#hour-15 .userInput").val(localStorage.getItem("hour-16"));
     });
 });
